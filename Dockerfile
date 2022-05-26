@@ -78,10 +78,10 @@ RUN set -ex \
         fi
 
 
-# Install node-addon-api couchbase-index-manager
+# Install couchbase-index-manager
 RUN mkdir -p /npm-packages && \
     npm config set prefix /npm-packages && \
-    npm install -g --unsafe-perm node-addon-api couchbase-index-manager-cli@2.0.0 && \
+    npm install -g --unsafe-perm couchbase-index-manager-cli@2.0.0 && \
     rm -rf /tmp/* /var/tmp/*
 ENV PATH="/npm-packages/bin:$PATH"
 
